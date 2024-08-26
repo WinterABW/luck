@@ -1,0 +1,23 @@
+main {
+    position: relative;
+    margin: 0 auto;
+    max-width: 720px;
+    color: var(--btn-text);
+    background: var(--bg);
+    font-size: 14px;
+    font-family: Helvetica Neue,Helvetica,sans-serif;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.a-t-29 {
+    --radius: 8px;
+    --btn-radius: 8px;
+    --card-radius: 8px;
+    --padding: 26px;
+    --mg: 16px;
+    --btn-bg3: #fcecb9;
+    --btn-bg4: #efc26f;
+    --card-bg: #f4f3ea;
+    --shadow: 0 4px 12px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
