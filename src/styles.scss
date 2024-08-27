@@ -1,15 +1,9 @@
-$vh: 6.79px;
-$text-gray6: #999;
-$text-gray: #bbb;
-$primary: #301E67;
-$primary-light: #E3F4F4;
-$bg: linear-gradient( to left,#CE5959 0%, #19376D 80%);
-$bg-card: #0E2954;
-$btn-bg: #00337C;
-$btn-bg2: #1C82AD;
-$btn-text: #eee;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-    background: $bg;
-    color: $text-gray6;
+    background: linear-gradient(to left, #CE5959 0%, #19376D 80%);
+    color: #eee;
 }
+
