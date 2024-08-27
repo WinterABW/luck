@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { BarComponent } from './components/bar/bar.component';
+import { FinancialComponent } from './components/financial/financial.component';
 
-const components=[BarComponent]
+const components=[BarComponent,FinancialComponent]
 
 @Component({
   selector: 'app-actions-card',
