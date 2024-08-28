@@ -1,12 +1,12 @@
-<div class="w-full bg-blue-950 flex justify-center flex-col gap-4 items-center px-8 py-4 rounded-lg">
-    <div class="w-full flex items-center border-b-[0.1px] pb-4">
+<div class="w-full bg-blue-950 flex justify-center flex-col gap-3 items-center px-8 py-4 rounded-lg">
+    <div class="w-full flex items-center gap-3 border-b-[0.1px] pb-2 text-base">
         <button class="w-1/2 flex flex-col items-center">
             <p>Ganancias obtenidas hoy</p>
-            {{todayProfits}}
+            <span class="text-2xl">{{todayProfits}}</span>
         </button>
         <button class="w-1/2 flex flex-col items-center">
             <p>Todas las ganancias</p>
-            {{profits}}
+            <span class="text-2xl">{{profits}}</span>
         </button>
     </div>
     <div class="w-full flex items-center">
@@ -24,11 +24,15 @@
         Gatear
     </button>
 </div>
-<div class="flex items-center bg-blue-950  mt-7 rounded-xl shadow-xl">
-    <button (click)="gafasVR()" class="w-1/2 py-4 rounded-xl bg-[#301E67]">
+<div class="flex items-center bg-blue-950 mt-7 rounded-xl shadow-xl">
+    <button (click)="gafasVR()" class="w-1/2 py-3 rounded-xl" [ngClass]="{'bg-[#301E67]': btnC}">
         Gafas VR
     </button>
-    <button (click)="myGafas()" class="w-1/2 py-4 rounded-xl">
+    <button (click)="myGafas()" class="w-1/2 py-3 rounded-xl" [ngClass]="{'bg-[#301E67]': !btnC}">
         Mis GAFAS
     </button>
+</div>
+
+<div class="p-3">
+    {{list}}
 </div>
