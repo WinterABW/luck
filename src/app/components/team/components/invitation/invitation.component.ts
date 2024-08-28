@@ -10,12 +10,21 @@ import { Component } from '@angular/core';
 export class InvitationComponent {
   code = '703240';
   link = 'https://ai-redbullvip.com/#/register?ic=703240';
+  
+  copyToClipboard(text: string, button: HTMLButtonElement): void {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        // Cambiar el texto del botón a "Copied"
+        button.textContent = 'Copied';
 
-  copyToClipboard(text: string): void {
-    navigator.clipboard.writeText(text).then(() => {
-      console.log('Texto copiado al portapapeles:', text);
-    }).catch(err => {
-      console.error('Error al copiar al portapapeles:', err);
-    });
+        // Revertir el texto del botón después de 1 segundo
+        setTimeout(() => {
+          button.textContent = 'Copiar';
+        }, 1000);
+      })
+      .catch((err) => {
+        console.error('Error al copiar al portapapeles:', err);
+      });
   }
 }
