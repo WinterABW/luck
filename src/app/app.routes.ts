@@ -20,4 +20,9 @@ export const routes: Routes = [
         (m) => m.TasksComponent
       ),
   },
+  {
+    path: 'team',
+    loadComponent: () =>
+      import('./components/team/team.component').then((m) => m.TeamComponent),
+  },
 ];
