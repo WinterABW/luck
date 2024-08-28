@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './tasks.component.scss'
 })
 export class TasksComponent {
-
+balance='0.00'
 }
