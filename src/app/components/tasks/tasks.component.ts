@@ -11,4 +11,8 @@ export class TasksComponent {
   balance = '0.00';
   todayProfits = 0;
   profits = 0;
+
+  gafasVR() {}
+
+  myGafas() {}
 }
