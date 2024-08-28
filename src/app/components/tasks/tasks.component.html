@@ -1,28 +1,30 @@
 <div class="w-full bg-blue-950 flex justify-center flex-col gap-4 items-center px-8 py-4 rounded-lg">
     <div class="w-full flex items-center border-b-[0.1px] pb-4">
-        <button class="w-1/2">
-            Ganancias obtenidas hoy
+        <button class="w-1/2 flex flex-col items-center">
+            <p>Ganancias obtenidas hoy</p>
+            {{todayProfits}}
         </button>
-        <button class="w-1/2">
-            Todas las ganancias
+        <button class="w-1/2 flex flex-col items-center">
+            <p>Todas las ganancias</p>
+            {{profits}}
         </button>
     </div>
-    <div class="w-full flex  items-center">
-        <article class="w-1/4 flex flex-col ">
+    <div class="w-full flex items-center">
+        <article class="w-1/2 flex flex-col ">
             {{balance}}
-            <p>Balance Total</p>
+            <p class="text-slate-400">Balance Total</p>
         </article>
-        <div class="w-3/4 flex justify-end">
-            <button>
+        <div class="w-1/2 flex justify-end">
+            <button class="bg-black py-1 px-4 rounded-xl text-sm">
                 Reacargar
             </button>
         </div>
     </div>
-    <div class="w-full flex items-center">
-        hi
-    </div>
+    <button class="w-full grad py-2 rounded-xl text-black font-semibold">
+        Gatear
+    </button>
 </div>
-<div class="flex items-center bg-blue-950 py-4 mt-7 rounded-xl">
+<div class="flex items-center bg-blue-950 py-4 mt-7 rounded-xl shadow-xl">
     <button class="w-1/2">
         Gafas VR
     </button>

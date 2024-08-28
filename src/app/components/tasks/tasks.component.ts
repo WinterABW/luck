@@ -5,8 +5,10 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.scss'
+  styleUrl: './tasks.component.scss',
 })
 export class TasksComponent {
-balance='0.00'
+  balance = '0.00';
+  todayProfits = 0;
+  profits = 0;
 }
