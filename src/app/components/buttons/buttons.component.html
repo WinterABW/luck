@@ -1,10 +1,10 @@
 <nav
     class="fixed bottom-0 z-50 w-full flex text-sm font-thin leading-none items-center justify-between box-border py-2 px-4 bg-blue-950 rounded-t-[2rem]">
-    <button class="flex flex-col items-center justify-center">
+    <button [routerLink]="['../']" class="flex flex-col items-center justify-center">
         <img src="assets/buttons/home.svg" alt="home" class="w-6">
         Home
     </button>
-    <button class="flex flex-col items-center">
+    <button [routerLink]="['../tasks']" class="flex flex-col items-center">
         <img src="assets/buttons/task.svg" alt="tasks" class="w-6">
         Task
     </button>
