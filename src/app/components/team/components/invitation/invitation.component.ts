@@ -10,15 +10,12 @@ import { Component } from '@angular/core';
 export class InvitationComponent {
   code = '703240';
   link = 'https://ai-redbullvip.com/#/register?ic=703240';
-  
+
   copyToClipboard(text: string, button: HTMLButtonElement): void {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        // Cambiar el texto del botón a "Copied"
         button.textContent = 'Copied';
-
-        // Revertir el texto del botón después de 1 segundo
         setTimeout(() => {
           button.textContent = 'Copiar';
         }, 1000);
