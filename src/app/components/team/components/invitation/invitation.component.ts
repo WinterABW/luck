@@ -5,8 +5,9 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './invitation.component.html',
-  styleUrl: './invitation.component.scss'
+  styleUrl: './invitation.component.scss',
 })
 export class InvitationComponent {
-
+  code = '703240';
+  link = 'https://ai-redbullvip.com/#/register?ic=703240';
 }
