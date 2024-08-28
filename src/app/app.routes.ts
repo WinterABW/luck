@@ -11,7 +11,7 @@ export const routes: Routes = [
     path: 'recharge',
     loadComponent: () =>
       import(
-        './components/actions-card/components/financial/recharge/recharge.component'
+        './components/home/components/actions-card/components/financial/recharge/recharge.component'
       ).then((m) => m.RechargeComponent),
   },
 ];
