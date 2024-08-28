@@ -1,4 +1,65 @@
-<span class="flex items-center gap-2 text-sm">
+<span class=" w-full flex items-center gap-2 text-sm mb-2">
     <img src="assets/icons/selccion.png" alt="selec" class="w-7">
     Periodo de selección
 </span>
+
+<div class="w-full flex items-center p-2 bg-blue-950 rounded-xl ">
+    <div class="w-full flex flex-col items-center justify-around">
+        <span class="p-2 flex flex-col">
+            <p class="text-sm text-slate-400">
+                Tamaño del equipo
+            </p>
+            <span class="text-center">
+                {{teamSize}}
+            </span>
+        </span>
+        <span class="p-2 flex flex-col">
+            <p class="text-sm text-slate-400">
+                Nuevo equipo
+            </p>
+            <span class="text-center">
+                {{newTeam}}
+            </span>
+        </span>
+        
+        
+    </div>
+    <div class="w-full flex flex-col items-center justify-around">
+        <span class="p-2 flex flex-col">
+            <p class="text-sm text-slate-400">
+                Recarga de equipo
+            </p>
+            <span class="text-center">
+                {{recharge}}
+            </span>
+        </span>
+        <span class="p-2 flex flex-col">
+            <p class="text-sm text-slate-400">
+                Recarga por primera vez
+            </p>
+            <span class="text-center">
+                {{rechargeFirst}}
+            </span>
+        </span>
+        
+    </div>
+    <div class="w-full flex flex-col items-center justify-around">
+        <span class="p-2 flex flex-col">
+            <p class="text-sm text-slate-400">
+                Retiro del equipo
+            </p>
+            <span class="text-center">
+                {{withdraw}}
+            </span>
+        </span>
+    
+        <span class="p-2 flex flex-col">
+            <p class="text-sm text-slate-400">
+                Primer retiro
+            </p>
+            <span class="text-center">
+                {{firstWithdraw}}
+            </span>
+        </span>
+    </div>
+</div>
