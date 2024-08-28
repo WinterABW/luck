@@ -2,13 +2,15 @@
     <h5 class="text-sm">Código de invitación: </h5>
     <div class="w-full flex items-center justify-between">
         <p class="text-2xl font-bold">{{code}}</p>
-        <button (click)="copyToClipboard(code)" class="bg-black py-0.5 px-3 text-sm rounded-xl text-white">Copiar</button>
+        <button (click)="copyToClipboard(code)"
+            class="bg-black py-0.5 px-3 text-sm rounded-xl text-white">Copiar</button>
     </div>
     <div class="w-full flex flex-col">
         <p class="text-sm">Comparte tu enlace de referencia y comienza a ganar</p>
         <div class="w-full flex items-center justify-between">
             <p>{{link}}</p>
-            <button (click)="copyToClipboard(link)" class="bg-black py-0.5 px-3 text-sm rounded-xl text-white">Copiar</button>
+            <button (click)="copyToClipboard(link)"
+                class="bg-black py-0.5 px-3 text-sm rounded-xl text-white">Copiar</button>
         </div>
     </div>
 </article>
