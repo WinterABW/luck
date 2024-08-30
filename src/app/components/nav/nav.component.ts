@@ -12,7 +12,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class NavComponent implements OnInit {
   isMeRoute = false;
   isScrolled = false;
-  isLogined=false
+  isLogined = false;
 
   private router = inject(Router);
 
@@ -20,6 +20,9 @@ export class NavComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isLogined = event.urlAfterRedirects === '/login';
+        if (!this.isLogined) {
+          this.isMeRoute = event.urlAfterRedirects === '/me';
+        }
       }
     });
   }
