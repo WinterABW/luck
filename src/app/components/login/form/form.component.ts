@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import { Component, inject, Input } from '@angular/core';
 import {
   FormBuilder,
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,NgClass],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
@@ -18,6 +19,7 @@ export class FormComponent {
   private fb = inject(FormBuilder);
   loginForm!: FormGroup;
   @Input() typeLogin = '';
+  passwordFieldType = 'password';
 
   router = inject(Router);
 
@@ -33,5 +35,12 @@ export class FormComponent {
       console.log('Form Submitted', this.loginForm.value);
     }
     this.router.navigate(['/home']);
+  }
+  togglePasswordVisibility() {
+    if (this.passwordFieldType === 'password') {
+      this.passwordFieldType = 'text';
+    } else {
+      this.passwordFieldType = 'password';
+    }
   }
 }
