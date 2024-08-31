@@ -1,11 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BackHomeComponent } from '../../../common/back-home/back-home.component';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [BackHomeComponent],
+  imports: [BackHomeComponent, NgClass],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
-export class RegisterComponent {}
+export class RegisterComponent implements OnInit{
+  btnC = true;
+  data:[string]=['']
+
+  ngOnInit(): void {
+    this.basica();
+  }
+
+  basica() {
+    this.btnC = true;
+    this.data=['Sin data']
+  }
+
+  retiro() {
+    this.btnC = false;
+    this.data=['Sin data']
+  }
+}
