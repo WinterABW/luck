@@ -8,24 +8,33 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.scss',
 })
-export class TasksComponent implements OnInit{
+export class TasksComponent implements OnInit {
   balance = '0.00';
   todayProfits = 0;
   profits = 0;
-  list=''
-  btnC=true
+  list: any = [];
+  btnC = true;
 
   ngOnInit(): void {
-    this.gafasVR()
+    this.gafasVR();
   }
 
   gafasVR() {
-    this.list='lista gafas Vr'
-    this.btnC=true
+    this.list = [
+      'Vision Pro',
+      'Oculus Quest 2',
+      'Meta Quest',
+      'HTC Vive',
+      'Pimax Plus',
+      'Gear VR',
+      ' Reality Headset ',
+      'Rift Box',
+    ];
+    this.btnC = true;
   }
 
   myGafas() {
-    this.list='mi lista'
-    this.btnC=false
+    this.list = ['No items found'];
+    this.btnC = false;
   }
 }

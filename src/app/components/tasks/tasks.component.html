@@ -34,5 +34,7 @@
 </div>
 
 <div class="p-3">
-    {{list}}
+    @for (gafas of list; track $index) {
+   <h1>{{$index+1}} - {{gafas}}</h1>
+    }
 </div>
