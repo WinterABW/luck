@@ -33,15 +33,29 @@ export const routes: Routes = [
   {
     path: 'recharge',
     loadComponent: () =>
-      import(
-        './common/recharge/recharge.component'
-      ).then((m) => m.RechargeComponent),
+      import('./common/recharge/recharge.component').then(
+        (m) => m.RechargeComponent
+      ),
   },
   {
     path: 'withdraw',
     loadComponent: () =>
       import('./common/withdraw/withdraw.component').then(
         (m) => m.WithdrawComponent
+      ),
+  },
+  {
+    path: 'register',
+    loadComponent: () =>
+      import('./components/me/register/register.component').then(
+        (m) => m.RegisterComponent
+      ),
+  },
+  {
+    path: 'account',
+    loadComponent: () =>
+      import('./components/me/account/account.component').then(
+        (m) => m.AccountComponent
       ),
   },
   {
