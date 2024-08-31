@@ -9,5 +9,6 @@ import { BackHomeComponent } from '../../../common/back-home/back-home.component
   styleUrl: './account.component.scss'
 })
 export class AccountComponent {
-
+basic='0.00'
+retiro='0.00'
 }
