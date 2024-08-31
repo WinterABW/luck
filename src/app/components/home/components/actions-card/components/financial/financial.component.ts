@@ -8,8 +8,4 @@ import { RouterLink } from '@angular/router';
   templateUrl: './financial.component.html',
   styleUrl: './financial.component.scss',
 })
-export class FinancialComponent {
-  print() {
-    alert('coming...');
-  }
-}
+export class FinancialComponent {}

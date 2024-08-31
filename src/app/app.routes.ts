@@ -14,13 +14,6 @@ export const routes: Routes = [
       import('./components/home/home.component').then((m) => m.HomeComponent),
   },
   {
-    path: 'recharge',
-    loadComponent: () =>
-      import(
-        './components/home/components/actions-card/components/financial/recharge/recharge.component'
-      ).then((m) => m.RechargeComponent),
-  },
-  {
     path: 'tasks',
     loadComponent: () =>
       import('./components/tasks/tasks.component').then(
@@ -37,8 +30,23 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/me/me.component').then((m) => m.MeComponent),
   },
-
   {
-    path:'',redirectTo:'login',pathMatch:'full'
-  }
+    path: 'recharge',
+    loadComponent: () =>
+      import(
+        './common/recharge/recharge.component'
+      ).then((m) => m.RechargeComponent),
+  },
+  {
+    path: 'withdraw',
+    loadComponent: () =>
+      import('./common/withdraw/withdraw.component').then(
+        (m) => m.WithdrawComponent
+      ),
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
 ];
