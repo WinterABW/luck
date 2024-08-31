@@ -27,7 +27,7 @@ export class TasksComponent implements OnInit {
       'HTC Vive',
       'Pimax Plus',
       'Gear VR',
-      ' Reality Headset ',
+      'Reality Headset ',
       'Rift Box',
     ];
     this.btnC = true;
