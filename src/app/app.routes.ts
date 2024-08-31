@@ -59,6 +59,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'password',
+    loadComponent: () =>
+      import('./components/me/changepass/changepass.component').then(
+        (m) => m.ChangepassComponent
+      ),
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
