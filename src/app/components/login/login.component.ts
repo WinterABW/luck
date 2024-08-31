@@ -10,6 +10,7 @@ import { FormComponent } from './form/form.component';
 })
 export class LoginComponent {
   btnC = true;
+  typeAuth='Correo electrónico'
 
   ngOnInit(): void {
     this.email();
@@ -17,9 +18,11 @@ export class LoginComponent {
 
   email() {
     this.btnC = true;
+    this.typeAuth='Correo electrónico:'
   }
 
   telf() {
     this.btnC = false;
+    this.typeAuth='Número de teléfono:'
   }
 }

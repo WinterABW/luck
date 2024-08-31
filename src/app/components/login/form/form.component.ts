@@ -1,5 +1,10 @@
-import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, inject, Input } from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -11,17 +16,18 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class FormComponent {
   private fb = inject(FormBuilder);
   loginForm!: FormGroup;
-
-  onSubmit() {
-    if (this.loginForm.valid) {
-      console.log('Form Submitted', this.loginForm.value);
-    }
-  }
+  @Input() typeLogin = '';
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
     });
+  }
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      console.log('Form Submitted', this.loginForm.value);
+    }
   }
 }
