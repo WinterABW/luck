@@ -1,1 +1,38 @@
-<p>withdraw works!</p>
+<div class="bg-blue-950 w-full flex items-center gap-4 p-3 rounded-xl mb-3 cursor-pointer" [routerLink]="['/home']">
+    <img src="assets/icons/back.svg" alt="back" class="w-6">
+    Go Back
+</div>
+<section class="w-full gap-4 flex flex-col items-center px-8 py-4 bg-blue-950 rounded-xl">
+    <div class="w-full flex justify-between items-center">
+        <article>
+            <h4 class="font-medium">Cuenta retiro</h4>
+            <p class="text-xs text-red-400">retiro 24 horas</p>
+        </article>
+        <img src="assets/icons/redbull.webp" alt="redbull" class="w-8 rounded-full">
+    </div>
+    <div class="w-full flex flex-col items-start justify-center bg-[#0D254B] p-5 rounded-lg">
+        <p class="text-base">Balance total</p>
+        <p class="text-base"><span class="text-2xl font-semibold">{{balance}} </span>USDT</p>
+    </div>
+    <div class="w-full flex items-start justify-start gap-1">
+        <p>Método de retiro: </p>
+        <button class="bg-[#301E67] py-2 px-4 rounded-lg">TRC20-USDT</button>
+    </div>
+
+    <input type="number" placeholder="Cuota 1.00 - 100000.00" class="w-full p-3 rounded-lg">
+
+    <textarea class="w-full p-3 rounded-lg" placeholder="Dirección de retiro"></textarea>
+    <input placeholder="Contraseña" class="w-full p-3 rounded-lg" type="password">
+    <div class="w-full flex items-center justify-between">
+        <span class="text-sm text-gray-500">Tasa de tramitación</span>
+        <div class="text-right text-sm">
+            <div class="">0 USDT</div>
+        </div>
+    </div>
+
+    <div class="w-full flex items-center justify-between"><span class="text-sm text-gray-500">Realmente recibido</span>
+        <div class="text-sm">0 USDT</div>
+    </div>
+
+    <button class="bg-[#301E67] w-full rounded-lg py-4 shadow-2xl font-bold">Confirmar</button>
+</section>
