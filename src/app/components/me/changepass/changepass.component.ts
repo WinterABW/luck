@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { BackHomeComponent } from '../../../common/back-home/back-home.component';
 
 @Component({
   selector: 'app-changepass',
   standalone: true,
-  imports: [],
+  imports: [BackHomeComponent],
   templateUrl: './changepass.component.html',
   styleUrl: './changepass.component.scss'
 })
