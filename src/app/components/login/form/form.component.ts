@@ -5,6 +5,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -18,6 +19,8 @@ export class FormComponent {
   loginForm!: FormGroup;
   @Input() typeLogin = '';
 
+  router = inject(Router);
+
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
@@ -29,5 +32,6 @@ export class FormComponent {
     if (this.loginForm.valid) {
       console.log('Form Submitted', this.loginForm.value);
     }
+    this.router.navigate(['/home']);
   }
 }
