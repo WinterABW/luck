@@ -16,7 +16,7 @@ export const routes: Routes = [
   {
     path: 'tasks',
     loadComponent: () =>
-      import('./components/tasks/tasks.component').then(
+      import('./components/articulos/tasks.component').then(
         (m) => m.TasksComponent
       ),
   },
