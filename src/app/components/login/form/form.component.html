@@ -1,13 +1,23 @@
 <form class="px-4 flex flex-col sm:gap-5 gap-2" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="mb-2">
         <label for="username" class="block sm:py-4 pb-2">{{typeLogin}}:</label>
-        <input id="username" type="text" formControlName="username"
-            class="w-full px-3 py-2 border text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-            placeholder="{{typeLogin}}" value="+57" />
+        <div class="flex">
+            @if (typeLogin==='Número de teléfono') {
+            <span
+                class="inline-flex items-center px-3 bg-gray-200 border border-r-0 border-gray-300 text-gray-900 rounded-l-md">
+                +57
+            </span>
+            }
+            <input id="username" type="text" formControlName="username"
+                [ngClass]="{'rounded-md': typeLogin!=='Número de teléfono'}"
+                class="w-full px-3 py-2 border text-gray-900 border-gray-300 rounded-r-md focus:outline-none focus:ring focus:ring-blue-500"
+                placeholder="{{typeLogin}}" />
+        </div>
         @if (loginForm.get('username')?.invalid && loginForm.get('username')?.touched) {
         <small class="text-red-500">{{typeLogin}} is required.</small>
         }
     </div>
+
 
     <div class="mb-2 ">
         <label for="password" class="block sm:py-4 pb-2">Contraseña:</label>
