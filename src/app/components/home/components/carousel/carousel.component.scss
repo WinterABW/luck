@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
 
 :root {
     --img: url('/assets/images/movil/3.jpg');
@@ -50,7 +50,7 @@ html {
     border-radius: 2px;
     z-index: 0;
     background-color: #fff;
-}
+} */
 
 /* .content:before {
 	content: "cuadernodeescaladas.com";
@@ -64,7 +64,7 @@ html {
 } */
 
 /* CONTROLS */
-.controls {
+/* .controls {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -95,11 +95,11 @@ input:first-child:checked~.content .controls label:first-child,
 input:last-of-type:checked~.content .controls label:last-of-type {
     cursor: default;
     opacity: 0.025;
-}
+} */
 
 
 /* HIDE LABELS */
-#b2:checked~.content .controls label[for=b2],
+/* #b2:checked~.content .controls label[for=b2],
 #b3:checked~.content .controls label[for=b3],
 #b4:checked~.content .controls label[for=b4],
 
@@ -108,7 +108,7 @@ input:last-of-type:checked~.content .controls label:last-of-type {
 #b4:checked~.content .controls label[for=b1],
 #b4:checked~.content .controls label[for=b2] {
     display: none;
-}
+} */
 
 
 /* ARROWS */
@@ -139,7 +139,7 @@ input:last-of-type:checked~.content .controls label:last-of-type {
 
 
 /* TITLES  */
-.body:after {
+/* .body:after {
     content: "MetaBox";
     position: absolute;
     top: 2vh;
@@ -168,10 +168,10 @@ input:last-of-type:checked~.content .controls label:last-of-type {
 
 .body:has(input#b4:checked):after {
     content: "El futuro en 360 grados.";
-}
+} */
 
 /*** THUMBNAILS ***/
-.thumbnails {
+/* .thumbnails {
     position: absolute;
     width: 100vw;
     bottom: 0vh;
@@ -191,9 +191,9 @@ input:last-of-type:checked~.content .controls label:last-of-type {
     background-position: center;
     opacity: 0.5;
     border-radius: 2px;
-}
+} */
 
-/* IMAGES / THUMBNAILS */
+/* IMAGES / THUMBNAILS 
 .body:has(input#b1:checked),
 .thumbnails label[for=b1] {
     --img: url('/assets/images/movil/1.jpg');
@@ -235,8 +235,9 @@ input:last-of-type:checked~.content .controls label:last-of-type {
 }
 
 
+*/
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES 
 @media only screen and (max-width:767px) {
     .body:after {
         top: 2vh;
@@ -250,4 +251,4 @@ input:last-of-type:checked~.content .controls label:last-of-type {
         font-size: 25px;
         white-space: pre-wrap;
     }
-}
+}*/
