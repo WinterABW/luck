@@ -1,10 +1,11 @@
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { CardComponent } from './card/card.component';
 
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass,CardComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.scss',
 })

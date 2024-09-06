@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardComponent } from './card/card.component';
+import { CardComponent } from '../articulos/card/card.component';
 
 @Component({
   selector: 'app-vip',
