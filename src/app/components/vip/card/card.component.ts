@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class CardComponent {
 
+  price='9.99'
+  daily=4
+  vr=1
 }
