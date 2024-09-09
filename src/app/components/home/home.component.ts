@@ -5,6 +5,7 @@ import { CompanyComponent } from './components/company/company.component';
 import { TimeComponent } from './components/time/time.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { ActionsCardComponent } from './components/actions-card/actions-card.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 const components = [
   NoticeComponent,
@@ -13,6 +14,7 @@ const components = [
   CompanyComponent,
   TimeComponent,
   TasksComponent,
+  SliderComponent
 ];
 
 @Component({
