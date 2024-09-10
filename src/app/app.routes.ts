@@ -59,7 +59,7 @@ export const routes: Routes = [
   {
     path: 'account',
     loadComponent: () =>
-      import('./components/me/account/account.component').then(
+      import('./components/team/components/level/account/account.component').then(
         (m) => m.AccountComponent
       ),
   },
