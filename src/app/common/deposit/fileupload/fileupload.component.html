@@ -1,9 +1,7 @@
 <div
     class="bg-blue-950 text-center px-4 rounded max-w-md flex flex-col items-center justify-center cursor-pointer border-2 border-gray-400 border-dashed mx-auto font-[sans-serif]">
-
-    <input type="file" id='uploadFile1' class="hidden" />
+    <input type="file" id='uploadFile1' class="hidden" (change)="onFileSelected($event)" />
     <label for="uploadFile1">
-
         <div class="py-6" for="uploadFile1">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-10 mb-2 fill-slate-200 inline-block" viewBox="0 0 32 32">
                 <path
@@ -19,8 +17,10 @@
 
     <hr class="w-full border-gray-400 my-2" />
 
-    <div class="py-6">
-
+    <div class="pb-3">
+        @if(fileName!==''){
+        <p class="p-2 bg-slate-700 rounded-sm mb-3">Archivo selecionado: {{fileName}}</p>
+        }
         <button (click)="ok()"
             class="block mx-auto px-6 py-2.5 rounded text-gray-800 text-sm tracking-wider font-semibold border-none outline-none cursor-pointer bg-gray-200 hover:bg-gray-100">Confirmar</button>
         <p class="text-xs text-slate-200 mt-4">PNG, JPG SVG, WEBP, and GIF son permitidos.</p>
