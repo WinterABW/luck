@@ -5,19 +5,26 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './fileupload.component.html',
-  styleUrl: './fileupload.component.scss'
+  styleUrl: './fileupload.component.scss',
 })
 export class FileuploadComponent {
-  fileName:string='';
+  fileName: string = '';
 
-  ok(){
+  ok() {
     console.log('ok');
-    alert('ok')
+    alert('ok');
   }
 
   onFileSelected(event: any) {
-    if(event.srcElement.files[0].type==='image/png'){
-      this.fileName=event.srcElement.files[0].name
+    const file = event.target.files[0];
+    const validImageTypes = ['image/png', 'image/jpeg', 'image/webp'];
+
+    if (file && validImageTypes.includes(file.type)) {
+      this.fileName = file.name;
+    } else {
+      console.error(
+        'Tipo de archivo no válido. Solo se permiten PNG, JPG y WEBP.'
+      );
     }
   }
 }
