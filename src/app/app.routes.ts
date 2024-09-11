@@ -59,9 +59,9 @@ export const routes: Routes = [
   {
     path: 'account/:text',
     loadComponent: () =>
-      import('./components/team/components/level/account/account.component').then(
-        (m) => m.AccountComponent
-      ),
+      import(
+        './components/team/components/level/account/account.component'
+      ).then((m) => m.AccountComponent),
   },
   {
     path: 'password',
@@ -71,8 +71,15 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'deposit',
+    loadComponent: () =>
+      import('./common/deposit/deposit.component').then(
+        (m) => m.DepositComponent
+      ),
+  },
+  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'deposit',
     pathMatch: 'full',
   },
 ];
