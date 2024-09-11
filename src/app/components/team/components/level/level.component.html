@@ -3,7 +3,7 @@
         <div class="flex justify-between items-center">
             <img src="assets/lvl/lvl1.png" alt="lvl1" class="w-20 -ml-7 -mr-5">
             <p class="font-semibold text-lg -ml-2">Lev 1</p>
-        </div> 
+        </div>
         <article class="flex sm:w-full flex-col px-1 py-2 gap-2 text-center bg-[#32373d75] rounded-xl">
             <span class="flex flex-col items-center gap-1">
                 <p class="text-xs">Registro</p>
@@ -18,13 +18,14 @@
                 {{lvl1.totalIncome}}
             </span>
         </article>
-        <button [routerLink]="['/account']"  class="w-full btn-grad rounded-xl text-xs py-1 px-2">Detalles</button>
+        <button [routerLink]="['/account',details.lv1.string]"
+            class="w-full btn-grad rounded-xl text-xs py-1 px-2">Detalles</button>
     </section>
     <section class="w-full lvl1-grad flex flex-col items-center gap-2 p-2.5 rounded-lg">
         <div class="flex justify-between items-center">
             <img src="assets/lvl/lvl2.png" alt="lvl2" class="w-20 -ml-7 -mr-5">
             <p class="font-semibold text-lg -ml-2">Lev 2</p>
-        </div> 
+        </div>
         <article class="flex sm:w-full flex-col px-1 py-2 gap-2 text-center bg-[#32373d75] rounded-xl">
             <span class="flex flex-col items-center gap-1">
                 <p class="text-xs">Registro</p>
@@ -39,13 +40,14 @@
                 {{lvl2.totalIncome}}
             </span>
         </article>
-        <button [routerLink]="['/account']"  class="w-full btn-grad rounded-xl text-xs py-1 px-2">Detalles</button>
+        <button [routerLink]="['/account',details.lv2.string]"
+            class="w-full btn-grad rounded-xl text-xs py-1 px-2">Detalles</button>
     </section>
     <section class="w-full lvl2-grad flex flex-col items-center gap-2 p-2.5 rounded-lg">
         <div class="flex justify-between items-center">
             <img src="assets/lvl/lvl3.png" alt="lvl3" class="w-20 -ml-7 -mr-5">
             <p class="font-semibold text-lg -ml-2">Lev 3</p>
-        </div> 
+        </div>
         <article class="flex sm:w-full flex-col px-1 py-2 gap-2 text-center bg-[#32373d75] rounded-xl">
             <span class="flex flex-col items-center gap-1">
                 <p class="text-xs">Registro</p>
@@ -60,6 +62,7 @@
                 {{lvl3.totalIncome}}
             </span>
         </article>
-        <button [routerLink]="['/account']"  class="w-full btn-grad rounded-xl text-xs py-1 px-2">Detalles</button>
+        <button [routerLink]="['/account',details.lv3.string]"
+            class="w-full btn-grad rounded-xl text-xs py-1 px-2">Detalles</button>
     </section>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BackHomeComponent } from '../../../../../common/back-home/back-home.component';
 
 @Component({
@@ -11,4 +11,10 @@ import { BackHomeComponent } from '../../../../../common/back-home/back-home.com
 export class AccountComponent {
 basic='0.00'
 retiro='0.00'
+
+@Input('text') text!:string
+
+constructor(){
+  console.log(this.text);
+}
 }

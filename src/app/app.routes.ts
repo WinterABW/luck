@@ -57,7 +57,7 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'account',
+    path: 'account/:text',
     loadComponent: () =>
       import('./components/team/components/level/account/account.component').then(
         (m) => m.AccountComponent
