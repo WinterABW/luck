@@ -1,7 +1,11 @@
-<app-back-home />
+<section class="w-full">
+    <app-back-home />
 
-<section class="flex flex-col gap-2">
-    <app-qr />
-    <app-address />
-    <app-info />
+    <section class="w-full flex flex-col gap-2 md:gap-4">
+        <div class="w-full flex flex-col sm:flex-row sm:justify-between gap-2 py-2">
+            <app-qr class="sm:w-1/2 w-full"/>
+            <app-address class="sm:w-1/2"/>
+        </div>
+        <app-info />
+    </section>
 </section>
