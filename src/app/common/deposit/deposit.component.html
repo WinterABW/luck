@@ -3,9 +3,14 @@
 
     <section class="w-full flex flex-col gap-2 md:gap-4">
         <div class="w-full flex flex-col sm:flex-row sm:justify-between gap-2 py-2">
-            <app-qr class="sm:w-1/2 w-full"/>
-            <app-address class="sm:w-1/2"/>
+            <app-qr class="sm:w-1/2 w-full" />
+            <app-address class="sm:w-1/2" (deposit)="complete($event)"></app-address>/>
         </div>
-        <app-info />
+        <div class="bg-blue-950 p-2 sm:p-4 md:p-6 rounded">
+            @if(receivedValue){
+            <app-fileupload />
+            }
+            <app-info />
+        </div>
     </section>
 </section>

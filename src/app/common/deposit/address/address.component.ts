@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-address',
@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './address.component.scss',
 })
 export class AddressComponent {
+  @Output() deposit = new EventEmitter<true>();
+
   link: string = 'TThr4nZA59XZ5MC8ZPkUdjPa7QAtpAx692';
+  
   copyToClipboard(text: string, button: HTMLButtonElement): void {
     navigator.clipboard
       .writeText(text)
@@ -21,5 +24,10 @@ export class AddressComponent {
       .catch((err) => {
         console.error('Error al copiar al portapapeles:', err);
       });
+  }
+
+  complete() {
+    const value = true;
+    this.deposit.emit(value);
   }
 }
