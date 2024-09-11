@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BackHomeComponent } from '../../../common/back-home/back-home.component';
+import { BackHomeComponent } from '../../../shared/back-home/back-home.component';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -9,9 +9,9 @@ import { NgClass } from '@angular/common';
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
-export class RegisterComponent implements OnInit{
+export class RegisterComponent implements OnInit {
   btnC = true;
-  data:[string]=['']
+  data: [string] = [''];
 
   ngOnInit(): void {
     this.basica();
@@ -19,11 +19,11 @@ export class RegisterComponent implements OnInit{
 
   basica() {
     this.btnC = true;
-    this.data=['Sin data']
+    this.data = ['Sin data'];
   }
 
   retiro() {
     this.btnC = false;
-    this.data=['Sin data']
+    this.data = ['Sin data'];
   }
 }

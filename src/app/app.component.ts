@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavComponent } from './common/nav/nav.component';
-import { ButtonsComponent } from './common/buttons/buttons.component';
+import { NavComponent } from './shared/nav/nav.component';
+import { ButtonsComponent } from './shared/buttons/buttons.component';
 import { BackgroundComponent } from './common/background/background.component';
 
 declare const THREE: any;
