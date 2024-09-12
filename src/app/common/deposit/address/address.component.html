@@ -4,9 +4,9 @@
     <head class="flex justify-start items-center gap-2">
         <img [src]="'assets/token/' + token + '.' + format" alt="logo" class="w-8 rounded-full">
         <p>{{token | uppercase }}</p>
-        <p class="text-xs text-red-400">Mínimo 10 USDT</p>
+        <p class="text-xs text-red-400">Mínimo {{minimo}} USDT</p>
     </head>
-    <div class="relative w-full rounded ring-1 ring-green-600">
+    <div class="relative w-full rounded ring-1 ring-red-600">
         <div class="bg-black rounded p-1 w-full">{{ link }}</div>
         <button #linkButton (click)="copyToClipboard(link, linkButton)"
             class="bg-[#301E67] py-0 px-1.5 text-xs rounded absolute inset-y-0 right-0">Copiar</button>

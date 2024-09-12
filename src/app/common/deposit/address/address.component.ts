@@ -14,9 +14,11 @@ export class AddressComponent implements OnInit {
   link: string = 'TThr4nZA59XZ5MC8ZPkUdjPa7QAtpAx692';
   @Input('token') token: string = '';
   format: string = 'png';
+  minimo=10
 
   ngOnInit() {
     if (this.token === 'trx') this.format = 'webp';
+    if (this.token === 'trx') this.minimo=75;
   }
 
   copyToClipboard(text: string, button: HTMLButtonElement): void {
