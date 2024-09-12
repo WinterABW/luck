@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FileuploadComponent } from './fileupload/fileupload.component';
-import { UpperCasePipe } from '@angular/common';
+import { NgStyle, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-address',
   standalone: true,
-  imports: [FileuploadComponent, UpperCasePipe],
+  imports: [FileuploadComponent, UpperCasePipe,NgStyle],
   templateUrl: './address.component.html',
   styleUrl: './address.component.scss',
 })
@@ -15,10 +15,14 @@ export class AddressComponent implements OnInit {
   @Input('token') token: string = '';
   format: string = 'png';
   minimo=10
+  ring='green'
 
   ngOnInit() {
     if (this.token === 'trx') this.format = 'webp';
-    if (this.token === 'trx') this.minimo=75;
+    if (this.token === 'trx') {
+      this.minimo=75
+      this.ring='red'
+    };
   }
 
   copyToClipboard(text: string, button: HTMLButtonElement): void {
