@@ -1,7 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavComponent } from './shared/nav/nav.component';
-import { ButtonsComponent } from './shared/buttons/buttons.component';
+import { Component, inject, OnInit } from '@angular/core';
 import { BackgroundComponent } from './common/background/background.component';
 
 declare const THREE: any;
@@ -28,6 +25,8 @@ export class AppComponent implements OnInit {
   onMouseDownLat = 0;
   onMouseDownMouseX = 0;
   onMouseDownMouseY = 0;
+
+  products: any[] = [];
 
   ngOnInit(): void {
     this.init();

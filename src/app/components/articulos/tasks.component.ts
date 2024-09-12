@@ -1,11 +1,12 @@
 import { NgClass } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CardComponent } from './card/card.component';
+import { ProductService } from '../../services/products/products.service';
 
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [NgClass,CardComponent],
+  imports: [NgClass, CardComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.scss',
 })
@@ -16,21 +17,14 @@ export class TasksComponent implements OnInit {
   list: any = [];
   btnC = true;
 
+  private productService = inject(ProductService);
+
   ngOnInit(): void {
     this.gafasVR();
   }
 
   gafasVR() {
-    this.list = [
-      'Vision Pro',
-      'Oculus Quest 2',
-      'Meta Quest',
-      'HTC Vive',
-      'Pimax Plus',
-      'Gear VR',
-      'Reality Headset ',
-      'Rift Box',
-    ];
+    this.list = this.productService.getProducts();
     this.btnC = true;
   }
 
