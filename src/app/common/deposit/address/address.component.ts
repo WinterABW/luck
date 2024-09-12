@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FileuploadComponent } from './fileupload/fileupload.component';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-address',
   standalone: true,
-  imports: [FileuploadComponent],
+  imports: [FileuploadComponent, UpperCasePipe],
   templateUrl: './address.component.html',
   styleUrl: './address.component.scss',
 })
-export class AddressComponent {
+export class AddressComponent implements OnInit {
   btnText: string = 'Recarga completada';
   link: string = 'TThr4nZA59XZ5MC8ZPkUdjPa7QAtpAx692';
+  @Input('token') token: string = '';
+  format: string = 'png';
+
+  ngOnInit() {
+    if (this.token === 'trx') this.format = 'webp';
+  }
 
   copyToClipboard(text: string, button: HTMLButtonElement): void {
     navigator.clipboard
@@ -27,9 +34,9 @@ export class AddressComponent {
   }
 
   complete() {
-    if(this.btnText === 'Recarga completada') {
+    if (this.btnText === 'Recarga completada') {
       this.btnText = 'Confirmar';
-    }else if(this.btnText === 'Confirmar') {
+    } else if (this.btnText === 'Confirmar') {
       alert('Check picture');
       this.btnText = 'Recarga completada';
     }

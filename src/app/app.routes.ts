@@ -71,7 +71,7 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'deposit',
+    path: 'deposit/:token',
     loadComponent: () =>
       import('./common/deposit/deposit.component').then(
         (m) => m.DepositComponent
