@@ -1,17 +1,17 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 @Component({
   selector: 'app-address',
   standalone: true,
-  imports: [],
+  imports: [FileuploadComponent],
   templateUrl: './address.component.html',
   styleUrl: './address.component.scss',
 })
 export class AddressComponent {
-  @Output() deposit = new EventEmitter<true>();
-
+  btnText: string = 'Recarga completada';
   link: string = 'TThr4nZA59XZ5MC8ZPkUdjPa7QAtpAx692';
-  
+
   copyToClipboard(text: string, button: HTMLButtonElement): void {
     navigator.clipboard
       .writeText(text)
@@ -27,7 +27,11 @@ export class AddressComponent {
   }
 
   complete() {
-    const value = true;
-    this.deposit.emit(value);
+    if(this.btnText === 'Recarga completada') {
+      this.btnText = 'Confirmar';
+    }else if(this.btnText === 'Confirmar') {
+      alert('Check picture');
+      this.btnText = 'Recarga completada';
+    }
   }
 }
