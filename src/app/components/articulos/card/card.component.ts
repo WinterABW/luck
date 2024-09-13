@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { NgOptimizedImage } from '@angular/common';
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
@@ -26,5 +26,13 @@ export class CardComponent implements OnInit {
     this.price = price;
     this.total = total;
     this.currency = currency;
+  }
+
+  getSrcSet(id: number): string {
+    return `
+      assets/glasses/${id}.png 300w,
+      assets/glasses/${id}.png 600w,
+      assets/glasses/${id}.png 1200w
+    `;
   }
 }

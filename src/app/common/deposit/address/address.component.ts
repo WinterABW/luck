@@ -22,7 +22,10 @@ export class AddressComponent implements OnInit {
       this.format = 'webp';
       this.minimo = 75;
       this.ring = 'red';
+    }else if(this.token === 'paypal'){
+      this.ring = 'blue';
     }
+    
   }
 
   copyToClipboard(text: string, button: HTMLButtonElement): void {
