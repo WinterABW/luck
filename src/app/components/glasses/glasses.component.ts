@@ -7,8 +7,7 @@ import { ProductService } from '../../services/products/products.service';
   selector: 'app-tasks',
   standalone: true,
   imports: [NgClass, CardComponent],
-  templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.scss',
+  templateUrl: './glasses.component.html',
 })
 export class TasksComponent implements OnInit {
   balance = '0.00';

@@ -16,7 +16,7 @@ export const routes: Routes = [
   {
     path: 'tasks',
     loadComponent: () =>
-      import('./components/articulos/tasks.component').then(
+      import('./components/glasses/glasses.component').then(
         (m) => m.TasksComponent
       ),
   },
@@ -78,8 +78,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: '**',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
     path: '',
-    redirectTo: 'deposit',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
 ];
