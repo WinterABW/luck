@@ -16,16 +16,21 @@ export class AddressComponent implements OnInit {
   format: string = 'png';
   minimo = 10;
   ring = 'green';
+  currency = 'USDT';
+  title='Dirección'
 
   ngOnInit() {
     if (this.token === 'trx') {
       this.format = 'webp';
       this.minimo = 75;
+      this.currency = 'USD';
       this.ring = 'red';
-    }else if(this.token === 'paypal'){
+    } else if (this.token === 'paypal') {
+      this.link='nicolascastellanosd933@gmail.com'
       this.ring = 'blue';
+      this.currency='USD'
+      this.title='Correo de Recarga'
     }
-    
   }
 
   copyToClipboard(text: string, button: HTMLButtonElement): void {

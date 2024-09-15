@@ -5,14 +5,8 @@ import { Component, Input, OnInit } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './qr.component.html',
-  styleUrl: './qr.component.scss'
+  styleUrl: './qr.component.scss',
 })
-export class QrComponent implements OnInit {
+export class QrComponent {
   @Input('token') token: string = '';
-
-  ngOnInit() {  
-    console.log(this.token);
-    
-  }
-
 }
