@@ -41,9 +41,9 @@ export class FormComponent {
    // const cleanUsername=username.split(" ")
    // console.log(cleanUsername);
     if (this.typeLogin === 'Número de teléfono') {
-      if (username === '3219631656' && password === '123456')
+      if (username === '3219631656' && password === '12345678')
         this.router.navigate(['/home']);
-    } else if (username === 'inicioprueba@gmail.com' && password === '123456') {
+    } else if (username === 'inicioprueba@gmail.com' && password === '12345678') {
       this.router.navigate(['/home']);
     } else {
       alert('invalid');
