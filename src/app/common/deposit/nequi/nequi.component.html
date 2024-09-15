@@ -1,7 +1,7 @@
-<section class="w-full bg-blue-950 rounded flex items-center">
+<section class="w-full bg-blue-950 rounded flex items-center py-2">
     <div class="w-full flex flex-col items-center justify-between gap-2 py-1.5">
         <div class="bg-gray-900 w-11/12 text-2xl font-medium py-5 text-center rounded relative">
-            $ {{ saldo }}
+            $ {{ saldo | number:'1.0-0' }}
             <div class="absolute top-2 left-2 text-xs font-light">Saldo actual</div>
         </div>
 
@@ -17,6 +17,6 @@
         </div>
 
         <div>Tipo de pago</div>
-        <button>Recargar ahora</button>
+        <button class="bg-[#301E67] w-4/5 p-2.5 rounded">Recargar ahora</button>
     </div>
 </section>
