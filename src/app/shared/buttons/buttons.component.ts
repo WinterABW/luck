@@ -1,10 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-buttons',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,RouterLinkActive],
   templateUrl: './buttons.component.html',
   styleUrl: './buttons.component.scss',
 })
