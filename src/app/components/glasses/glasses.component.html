@@ -20,23 +20,20 @@
             </button>
         </div>
     </div>
-    <button class="w-full grad py-2 rounded-xl text-black font-semibold">
-        Gatear
-    </button>
 </div>
 <div class="flex items-center bg-blue-950 mt-7 rounded-xl shadow-xl">
     <button (click)="gafasVR()" class="w-1/2 py-3 rounded-xl"
-        [ngClass]="{'bg-[#301E67] shadow-xl font-semibold': btnC}">
+        [ngClass]="{'bg-[#301E67] shadow-xl font-semibold': notMine}">
         Gafas VR
     </button>
     <button (click)="myGafas()" class="w-1/2 py-3 rounded-xl"
-        [ngClass]="{'bg-[#301E67] shadow-xl font-semibold': !btnC}">
+        [ngClass]="{'bg-[#301E67] shadow-xl font-semibold': !notMine}">
         Mis GAFAS
     </button>
 </div>
 
-<div class="flex flex-col items-center gap-3 mt-3">
+<div class="grid md:grid-cols-3 gap-4 mt-3">
     @for (gafas of list; track $index) {
-    <app-card [data]="gafas"/>
+    <app-card [data]="gafas" [showBtn]="notMine"/>
     }
 </div>

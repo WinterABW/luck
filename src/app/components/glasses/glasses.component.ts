@@ -14,7 +14,7 @@ export class TasksComponent implements OnInit {
   todayProfits = 0;
   profits = 0;
   list: any = [];
-  btnC = true;
+  notMine = true;
 
   private productService = inject(ProductService);
 
@@ -24,11 +24,11 @@ export class TasksComponent implements OnInit {
 
   gafasVR() {
     this.list = this.productService.getProducts();
-    this.btnC = true;
+    this.notMine = true;
   }
 
   myGafas() {
     this.list = ['No items found'];
-    this.btnC = false;
+    this.notMine = false;
   }
 }

@@ -9,6 +9,7 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class CardComponent implements OnInit {
   @Input() data:any={};
+  @Input() showBtn:any=false
   id: number = 0;
   name: string = '';
   price: number = 0;
