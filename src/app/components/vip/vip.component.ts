@@ -8,4 +8,8 @@ import { CardComponent } from '../glasses/card/card.component';
   templateUrl: './vip.component.html',
   styleUrl: './vip.component.scss',
 })
-export class VipComponent {}
+export class VipComponent {
+  cliam = '0.00';
+  todayMission = 0;
+  missions = 0;
+}
