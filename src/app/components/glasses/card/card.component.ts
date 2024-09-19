@@ -1,15 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [NgClass],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
 export class CardComponent implements OnInit {
   @Input() data:any={};
-  @Input() showBtn:any=false
+  @Input() mine:any=false
   id: number = 0;
   name: string = '';
   price: number = 0;

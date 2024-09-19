@@ -23,12 +23,12 @@ export class TasksComponent implements OnInit {
   }
 
   gafasVR() {
-    this.list = this.productService.getProducts();
+    this.list = this.productService.getGlasses();
     this.notMine = true;
   }
 
   myGafas() {
-    this.list = ['No items found'];
+    this.list = this.productService.MyGlasses();
     this.notMine = false;
   }
 }
