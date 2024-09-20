@@ -6,31 +6,29 @@
         <img [src]="'assets/glasses/tinified/'+id+'.png'" alt="img" class="w-56 -ml-8 -mb-4 rounded">
         <div class="w-full flex flex-col items-center gap-1 text-sm font-light -ml-14">
             <span class="w-full flex justify-between items-center">
-                <p>{{mine?'Artículos máximos':'Dias restantes'}}</p>
+                <p>{{mine?'Días de actividad':'Dias restantes'}}</p>
                 4
             </span>
             <span class="w-full flex justify-between items-center">
-                <p>{{mine?'Beneficio porcentaje':'Beneficio en porcentaje'}}</p>
+                <p>{{mine?'Precio':'Beneficio en porcentaje'}}</p>
                 <p class="text-green-600">4</p>
             </span>
-            @if(!mine) {
-                <span class="w-full flex justify-between items-center">
-                    <p>Beneficio por hora</p>
-                    <span class="inline-flex items-center gap-1">
-                        <p class="">4</p>COP
-                    </span>
-                </span>
-            }
             <span class="w-full flex justify-between items-center">
-                <p>Beneficio diario</p>
+                <p>{{mine?'Artículos máximos':'Beneficio por hora'}}</p>
                 <span class="inline-flex items-center gap-1">
                     <p class="">4</p>COP
                 </span>
             </span>
             <span class="w-full flex justify-between items-center">
-                <p>Beneficio total</p>
+                <p>Beneficio diario (COP)</p>
                 <span class="inline-flex items-center gap-1">
-                    <p class="text-green-600 font-semibold">{{total}}</p>COP
+                    <p class="">4</p>
+                </span>
+            </span>
+            <span class="w-full flex justify-between items-center">
+                <p>Beneficio total (COP)</p>
+                <span class="inline-flex items-center gap-1">
+                    <p class="text-green-600 font-semibold">{{total}}</p>
                 </span>
             </span>
             @if(mine){
