@@ -3,7 +3,6 @@ import { NoticeComponent } from './components/notice/notice.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CompanyComponent } from './components/company/company.component';
 import { TimeComponent } from './components/time/time.component';
-import { TasksComponent } from './components/tasks/tasks.component';
 import { ActionsCardComponent } from './components/actions-card/actions-card.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ActivityComponent } from './components/activity/activity.component';
@@ -14,7 +13,6 @@ const components = [
   ActionsCardComponent,
   CompanyComponent,
   TimeComponent,
-  TasksComponent,
   SliderComponent,
   ActivityComponent,
 ];
