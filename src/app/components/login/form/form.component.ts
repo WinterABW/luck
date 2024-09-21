@@ -19,6 +19,7 @@ export class FormComponent {
   private fb = inject(FormBuilder);
   loginForm!: FormGroup;
   @Input() typeLogin = '';
+  @Input() isRegistered = false;
   passwordFieldType = 'password';
   pass: string = '123456';
   correo: string = 'inicioprueba@gmail.com';

@@ -17,8 +17,6 @@
         <small class="text-red-500">{{typeLogin}} is required.</small>
         }
     </div>
-
-
     <div class="mb-2 ">
         <label for="password" class="block sm:py-4 pb-2">Contraseña:</label>
         <div class="relative">
@@ -42,6 +40,6 @@
 
     <button type="submit" class="w-full px-4 py-4 cursor-pointer bg-[#301E67] font-semibold rounded-md"
         [disabled]="loginForm.invalid">
-        Iniciar Sesión
+        {{isRegistered ? 'Iniciar Sesión' : 'Registrarse'}}
     </button>
 </form>

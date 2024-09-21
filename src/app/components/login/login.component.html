@@ -8,18 +8,21 @@
             <div class="flex items-center bg-blue-950 mt-7 rounded-xl shadow-xl">
                 <button (click)="email()" class="w-1/2 sm:p-4 p-2 rounded-xl text-center"
                     [ngClass]="{'bg-[#301E67] shadow-xl font-semibold': btnC}">
-                    Iniciar sesión por correo electrónico
+                    
+                    {{isRegistered? 'Iniciar sesión por correo electrónico': 'Registarse por correo electrónico'}}
                 </button>
                 <button (click)="telf()" class="w-1/2 h-full sm:p-4 p-2 rounded-xl text-center"
                     [ngClass]="{'bg-[#301E67] shadow-xl font-semibold': !btnC}">
-                    Iniciar sesión por teléfono
+                    {{isRegistered? 'Iniciar sesión por teléfono': 'Registarse por teléfono'}}
                 </button>
 
             </div>
 
-            <app-form  [typeLogin]="typeAuth"/>
+            <app-form  [typeLogin]="typeAuth" [isRegistered]="isRegistered"/>
 
-            <p class="text-center underline">Inscribirse</p>
+            <a (click)="goLogin()" class="text-center underline">
+                {{isRegistered? '¿No tienes una cuenta? Regístrate': '¿Ya tienes una cuenta? Inicia sesión'}}
+            </a>
         </div>
     </div>
 </div>

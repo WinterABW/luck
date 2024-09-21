@@ -50,13 +50,6 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'register',
-    loadComponent: () =>
-      import('./components/me/register/register.component').then(
-        (m) => m.RegisterComponent
-      ),
-  },
-  {
     path: 'account/:text',
     loadComponent: () =>
       import(

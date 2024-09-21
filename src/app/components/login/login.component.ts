@@ -11,6 +11,7 @@ import { FormComponent } from './form/form.component';
 export class LoginComponent {
   btnC = true;
   typeAuth = 'Correo electrónico';
+  isRegistered = false;
 
   ngOnInit(): void {
     this.email();
@@ -24,5 +25,8 @@ export class LoginComponent {
   telf() {
     this.btnC = false;
     this.typeAuth = 'Número de teléfono';
+  }
+  goLogin(){
+    this.isRegistered = !this.isRegistered;
   }
 }
