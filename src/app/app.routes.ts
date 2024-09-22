@@ -50,10 +50,10 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'account/:text',
+    path: 'account',
     loadComponent: () =>
       import(
-        './components/team/components/level/account/account.component'
+        './components/me/account/account.component'
       ).then((m) => m.AccountComponent),
   },
   {
