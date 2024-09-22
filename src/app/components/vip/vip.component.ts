@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../glasses/card/card.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @Component({
   selector: 'app-vip',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent,NavComponent],
   templateUrl: './vip.component.html',
   styleUrl: './vip.component.scss',
 })
