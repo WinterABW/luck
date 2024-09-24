@@ -6,6 +6,7 @@ import { TimeComponent } from './components/time/time.component';
 import { ActionsCardComponent } from './components/actions-card/actions-card.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ActivityComponent } from './components/activity/activity.component';
+import { MemberlistComponent } from './components/memberlist/memberlist.component';
 
 const components = [
   NoticeComponent,
@@ -15,6 +16,7 @@ const components = [
   TimeComponent,
   SliderComponent,
   ActivityComponent,
+  MemberlistComponent
 ];
 
 @Component({
