@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-notice',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './notice.component.scss'
 })
 export class NoticeComponent {
+
+  @Output() open = new EventEmitter<boolean>();
+
+  openModal(){
+    this.open.emit(true);
+  }
 
 }

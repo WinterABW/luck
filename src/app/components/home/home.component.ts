@@ -7,6 +7,7 @@ import { ActionsCardComponent } from './components/actions-card/actions-card.com
 import { SliderComponent } from './components/slider/slider.component';
 import { ActivityComponent } from './components/activity/activity.component';
 import { MemberlistComponent } from './components/memberlist/memberlist.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 const components = [
   NoticeComponent,
@@ -16,7 +17,8 @@ const components = [
   TimeComponent,
   SliderComponent,
   ActivityComponent,
-  MemberlistComponent
+  MemberlistComponent,
+  ModalComponent,
 ];
 
 @Component({
@@ -26,4 +28,10 @@ const components = [
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  modal: boolean = false;
+
+  toggleModal(isOpen: boolean) {
+    this.modal = isOpen;
+  }
+}
