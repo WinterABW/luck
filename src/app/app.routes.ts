@@ -50,7 +50,7 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'account',
+    path: 'account/:word',
     loadComponent: () =>
       import(
         './components/me/account/account.component'
