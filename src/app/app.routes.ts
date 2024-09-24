@@ -26,6 +26,13 @@ export const routes: Routes = [
       import('./components/team/team.component').then((m) => m.TeamComponent),
   },
   {
+    path: 'lvl/:lvl',
+    loadComponent: () =>
+      import(
+        './components/team/components/level/account/account.component'
+      ).then((c) => c.AccountComponent),
+  },
+  {
     path: 'vip',
     loadComponent: () =>
       import('./components/vip/vip.component').then((m) => m.VipComponent),
@@ -50,11 +57,11 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'account/:word',
+    path: 'account',
     loadComponent: () =>
-      import(
-        './components/me/account/account.component'
-      ).then((m) => m.AccountComponent),
+      import('./components/me/account/account.component').then(
+        (m) => m.AccountComponent
+      ),
   },
   {
     path: 'password',

@@ -11,10 +11,5 @@ import { BackHomeComponent } from '../../../../../shared/back-home/back-home.com
 export class AccountComponent {
   basic = '0.00';
   retiro = '0.00';
-
-  @Input('text') text!: string;
-
-  constructor() {
-    console.log(this.text);
-  }
+  @Input('lvl') lvl!: number
 }
