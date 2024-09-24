@@ -1,46 +1,31 @@
-import { NgStyle } from '@angular/common';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-memberlist',
   standalone: true,
-  imports:[NgStyle],
+  imports: [],
   templateUrl: './memberlist.component.html',
   styleUrls: ['./memberlist.component.scss'],
 })
-
-export class MemberlistComponent implements OnInit, OnDestroy {
+export class MemberlistComponent {
   userlist: any[] = [];
-  displayList: any[] = []; // Lista para mostrar en la interfaz
-  currentOffset: number = 0; // Desplazamiento actual de la lista
-  intervalId: any; // ID del intervalo
 
   constructor() {
     this.generateUserList();
-  }
-
-  ngOnInit() {
-    // Duplica la lista para el efecto de desplazamiento infinito
-    this.displayList = [...this.userlist, ...this.userlist];
-    this.intervalId = setInterval(() => {
-      this.scrollList();
-    }, 3000); // Cambia cada 3 segundos, ajusta según tus necesidades
-  }
-
-  ngOnDestroy() {
-    clearInterval(this.intervalId);
+    this.startScrolling()
   }
 
   generatePhoneNumber(): number {
-    return Math.floor(Math.random() * 9000) + 1000; // Número de 4 dígitos
+    return Math.floor(Math.random() * 9000) + 1000;
   }
 
   generateRandomNumber(): number {
     return Math.floor(Math.random() * 200) + 1;
   }
 
-  generateRandomID(){
-    return Math.floor(Math.random() * 15) + 0;
+  generateRandomID() {
+    return Math.floor(Math.random() * 14) + 0;
   }
 
   generateUserList() {
@@ -54,18 +39,17 @@ export class MemberlistComponent implements OnInit, OnDestroy {
   }
 
   scrollList() {
-    // Mueve el desplazamiento hacia arriba
-    this.currentOffset -= 40; // Ajusta la cantidad de desplazamiento
-    if (Math.abs(this.currentOffset) >= 40) {
-      // Resetea el desplazamiento y elimina el primer elemento
-      this.currentOffset = 0;
-      this.displayList.shift(); // Elimina el primer elemento para simular el desplazamiento
-      // Agrega un nuevo usuario al final de la lista
-      this.displayList.push({
-        id: this.generateRandomID(),
-        phoneNumber: this.generatePhoneNumber(),
-        randomNumber: this.generateRandomNumber(),
-      });
-    }
+    this.userlist.shift();
+    this.userlist.push({
+      id: this.generateRandomID(),
+      phoneNumber: this.generatePhoneNumber(),
+      randomNumber: this.generateRandomNumber(),
+    });
+  }
+
+  startScrolling() {
+    setInterval(() => {
+      this.scrollList();
+    }, 1500); // Cambia cada 3 segundos, ajusta según sea necesario
   }
 }
