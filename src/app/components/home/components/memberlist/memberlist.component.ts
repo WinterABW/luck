@@ -39,10 +39,14 @@ export class MemberlistComponent implements OnInit, OnDestroy {
     return Math.floor(Math.random() * 200) + 1;
   }
 
+  generateRandomID(){
+    return Math.floor(Math.random() * 15) + 0;
+  }
+
   generateUserList() {
     for (let i = 1; i <= 5; i++) {
       this.userlist.push({
-        id: i,
+        id: this.generateRandomID(),
         phoneNumber: this.generatePhoneNumber(),
         randomNumber: this.generateRandomNumber(),
       });
@@ -58,7 +62,7 @@ export class MemberlistComponent implements OnInit, OnDestroy {
       this.displayList.shift(); // Elimina el primer elemento para simular el desplazamiento
       // Agrega un nuevo usuario al final de la lista
       this.displayList.push({
-        id: this.displayList.length + 1,
+        id: this.generateRandomID(),
         phoneNumber: this.generatePhoneNumber(),
         randomNumber: this.generateRandomNumber(),
       });
