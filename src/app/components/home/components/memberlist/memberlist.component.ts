@@ -50,6 +50,6 @@ export class MemberlistComponent {
   startScrolling() {
     setInterval(() => {
       this.scrollList();
-    }, 1500); // Cambia cada 3 segundos, ajusta según sea necesario
+    }, 1500); 
   }
 }
